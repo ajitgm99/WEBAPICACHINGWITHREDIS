@@ -1,0 +1,6 @@
+@WEBAPICACHINGWITHREDIS_HostAddress = http://localhost:5151
+
+GET {{WEBAPICACHINGWITHREDIS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
