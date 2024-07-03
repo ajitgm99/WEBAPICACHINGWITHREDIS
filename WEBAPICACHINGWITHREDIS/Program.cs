@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WEBAPICACHINGWITHREDIS.DATA;
+using WEBAPICACHINGWITHREDIS.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddScoped<ICacheService,CachedService>();
 
 var app = builder.Build();
 
