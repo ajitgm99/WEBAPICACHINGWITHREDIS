@@ -45,7 +45,7 @@ namespace WEBAPICACHINGWITHREDIS.Controllers
 
                 //Set Data in redis cache
 
-                var expirytime=DateTimeOffset.Now.AddSeconds(10);
+                var expirytime=DateTimeOffset.Now.AddSeconds(1000);
                 _cacheService.SetData<IEnumerable<Employee>>("Employees", Couponlist, expirytime);
 
                 _response.Result = Couponlist;
